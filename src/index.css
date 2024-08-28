@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  color: black;
+}
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.El-Title>svg {
+  display: none;
+}
+
+.El-Title:hover>svg {
+  display: block;
+}
+
+.El {
+  position: relative;
+}
+
+.El .ElBefore {
+  width: 24px;
+  position: absolute;
+  height: 1px;
+  background-color: gray;
+  top: 12px;
+  left: -24px;
+}
+
+.El .ElBeforeVertical {
+  position: absolute;
+  width: 1px;
+  background-color: gray;
+  height: 100%;
+  left: -24px;
+  top: 0;
+}
+
+.El.lastEl .ElBeforeVertical {
+  position: absolute;
+  width: 1px;
+  background-color: gray;
+  height: 16px;
+  left: -24px;
+  top: -4px;
+}
+
+
+input:invalid {
+  border: none;
+  outline: 1px solid red;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none !important;
+}
